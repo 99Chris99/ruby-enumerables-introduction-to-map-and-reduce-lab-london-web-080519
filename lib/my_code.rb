@@ -33,9 +33,8 @@ end
 
 def reduce_to_all_true(source_array)
 
-source_array.reduce { |sum| &&sum }
+source_array.reduce{ |sum, element| sum && element }
 #source_array.reduce { |sum, element| sum && element}
-
 
 
 
@@ -43,6 +42,6 @@ end
 
 def reduce_to_any_true(source_array)
 
-  source_array.reduce {|sum| ||sum }
+  source_array.reduce{|sum, element| sum||element}
 
 end
